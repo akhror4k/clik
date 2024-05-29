@@ -1,0 +1,146 @@
+/*
+CopyLeft 2020 Michael Rouves
+
+	This file is part of Michael's Clicker.
+	Michael's Clicker is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	Michael's Clicker is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with Michael's Clicker. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* 
+			================= BODY =================
+*/
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background: rgb(255, 215, 0);
+  background: radial-gradient(
+    circle,
+    rgb(255, 215, 0) 0%,
+    rgb(255, 215, 0) 31%,
+    rgb(139, 69, 19) 100%
+  );
+}
+
+/* 
+      ================= ALL BUTTONS ANIMATIONS =================
+*/
+
+.button,
+.clicker {
+  /*Disable selection and drag*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  /*Revome buttons borders and otlines*/
+  outline: none;
+  border: none;
+  background-color: #c4ac0a; /*white*/
+  border-radius: 50px;
+
+  /*Transition Animation between hover/active...*/
+  transition: box-shadow 0.3s, background-color 0.3s;
+}
+.button:hover,
+.clicker:hover {
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(15, 15, 15, 0.15); /*shadow*/
+}
+.button:active,
+.clicker:active {
+  /*Shadow, color transition*/
+  transition: box-shadow 0.15s, background-color 0.1s;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3),
+    0 20px 20px 0 rgba(0, 0, 0, 0.15);
+  background-color: #f0f0f0;
+}
+
+/*
+			================= SHOP =================
+*/
+.button {
+  width: 200;
+  height: 80;
+  position: absolute;
+  left: 50%;
+  margin-top: 20%;
+  transform: translate(-50%, -50%);
+}
+.button:disabled {
+  background-color: rgb(139, 69, 19);
+  color: #f0f0f0;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  border-radius: 50px;
+}
+
+#b1 {
+  top: 52%;
+}
+#b2 {
+  top: 52%;
+  left: 30%;
+}
+#b3 {
+  top: 52%;
+  left: 70%;
+}
+
+/* 
+	  ================= Main Clicker Button =================
+*/
+.clicker {
+  /*Size*/
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  /* Position */
+  position: absolute; /*                postulat de départ */
+  top: 50%;
+  left: 50%; /*               à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /*  décalage de 50% de sa propre taille */
+  /* Animation */
+  transition: width 0.3s, height 0.3s;
+}
+.clicker:hover {
+  width: 325px;
+  height: 325px;
+}
+.clicker:active {
+  transition: width 0.05s, height 0.05s;
+  width: 200px;
+  height: 200px;
+}
+
+/* 
+	    ================= Money text Display =================
+*/
+
+.money-text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  color: #ffffff;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+.moneey {
+  display: flex;
+  justify-content: center;
+  margin-top: 500px;
+}
